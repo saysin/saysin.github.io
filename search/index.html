@@ -55,18 +55,18 @@
   };
 </script>
 
-  <meta name="description" content="School: Zhejiang UniversityDegree: Ph.DMajor: OpticsBirthday: Dec.1,1992E-mail: saysin@163.com">
+  <meta name="description" content="守得初心，方得始终。">
 <meta property="og:type" content="website">
-<meta property="og:title" content="我的简介">
-<meta property="og:url" content="https://saysin.github.io/about/index.html">
+<meta property="og:title" content="search">
+<meta property="og:url" content="https://saysin.github.io/search/index.html">
 <meta property="og:site_name" content="春华秋实">
-<meta property="og:description" content="School: Zhejiang UniversityDegree: Ph.DMajor: OpticsBirthday: Dec.1,1992E-mail: saysin@163.com">
+<meta property="og:description" content="守得初心，方得始终。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-20T09:44:30.961Z">
+<meta property="og:updated_time" content="2019-10-20T23:16:26.646Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我的简介">
-<meta name="twitter:description" content="School: Zhejiang UniversityDegree: Ph.DMajor: OpticsBirthday: Dec.1,1992E-mail: saysin@163.com">
-  <link rel="canonical" href="https://saysin.github.io/about/">
+<meta name="twitter:title" content="search">
+<meta name="twitter:description" content="守得初心，方得始终。">
+  <link rel="canonical" href="https://saysin.github.io/search/">
 
 
 <script id="page-configurations">
@@ -80,7 +80,7 @@
   };
 </script>
 
-  <title>我的简介 | 春华秋实</title>
+  <title>search | 春华秋实</title>
   
 
 
@@ -350,7 +350,7 @@
     <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">我的简介
+<h1 class="post-title" itemprop="name headline">search
 
 </h1>
 
@@ -366,8 +366,7 @@
       
       <div class="post-body">
         
-          <p>School: Zhejiang University<br>Degree: Ph.D<br>Major: Optics<br>Birthday: Dec.1,1992<br>E-mail: <a href="mailto:saysin@163.com" target="_blank" rel="noopener">saysin@163.com</a></p>
-
+          
         
       </div>
       
@@ -384,6 +383,49 @@
 
           </div>
           
+    
+      <div class="tabs tabs-comment">
+        <ul class="nav-tabs">
+          
+            <li class="tab"><a href="#comment-gitalk">gitalk</a></li>
+          
+            <li class="tab"><a href="#comment-valine">valine</a></li>
+          
+        </ul>
+        <div class="tab-content">
+          
+            <div class="tab-pane gitalk" id="comment-gitalk">
+              <div class="comments" id="gitalk-container"></div>
+            </div>
+          
+            <div class="tab-pane valine" id="comment-valine">
+              <div class="comments" id="comments"></div>
+            </div>
+          
+        </div>
+      </div>
+      <script>
+        window.addEventListener('tabs:register', () => {
+          let activeClass = '';
+          
+            activeClass = localStorage.getItem('comments_active') || activeClass;
+          
+          if (activeClass) {
+            let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+            if (activeTab) {
+              activeTab.click();
+            }
+          }
+        });
+        
+        window.addEventListener('tabs:click', event => {
+          let commentClass = event.target.classList[1];
+          localStorage.setItem('comments_active', commentClass);
+        });
+        
+      </script>
+    
+  
 
         </div>
           
@@ -562,6 +604,24 @@
 
   
 
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID: 'bfb3d43b083c44600baa',
+      clientSecret: 'fd0eea1f4dea43aed37216b8ba6ecb43570f1beb',
+      repo: 'BlogComments',
+      owner: 'saysin',
+      admin: ['saysin'],
+      id: '6d026128bba87ec7ba853c9aa80f4323',
+        language: window.navigator.language || window.navigator.userLanguage,
+      
+      distractionFreeMode: 'true'
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+</script>
 
 
 <script>
