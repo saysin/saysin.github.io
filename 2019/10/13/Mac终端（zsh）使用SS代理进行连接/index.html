@@ -247,7 +247,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="saysin">
       <meta itemprop="description" content="守得初心，方得始终。">
-      <meta itemprop="image" content="/images/pic.jpg">
+      <meta itemprop="image" content="https://avatars1.githubusercontent.com/u/32269?v=3&s=460">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -386,19 +386,19 @@ curl https://ip.cn #发现此时ip地址发生了变化，说明终端代理设�
       <div class="tabs tabs-comment">
         <ul class="nav-tabs">
           
-            <li class="tab"><a href="#comment-valine">valine</a></li>
-          
             <li class="tab"><a href="#comment-gitalk">gitalk</a></li>
+          
+            <li class="tab"><a href="#comment-valine">valine</a></li>
           
         </ul>
         <div class="tab-content">
           
-            <div class="tab-pane valine" id="comment-valine">
-              <div class="comments" id="comments"></div>
-            </div>
-          
             <div class="tab-pane gitalk" id="comment-gitalk">
               <div class="comments" id="gitalk-container"></div>
+            </div>
+          
+            <div class="tab-pane valine" id="comment-valine">
+              <div class="comments" id="comments"></div>
             </div>
           
         </div>
@@ -464,7 +464,7 @@ curl https://ip.cn #发现此时ip地址发生了变化，说明终端代理设�
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image"
-      src="/images/pic.jpg"
+      src="https://avatars1.githubusercontent.com/u/32269?v=3&s=460"
       alt="saysin">
   <p class="site-author-name" itemprop="name">saysin</p>
   <div class="site-description" itemprop="description">守得初心，方得始终。</div>
@@ -603,6 +603,25 @@ curl https://ip.cn #发现此时ip地址发生了变化，说明终端代理设�
 
   
 
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID: 'bfb3d43b083c44600baa',
+      clientSecret: 'fd0eea1f4dea43aed37216b8ba6ecb43570f1beb',
+      repo: 'BlogComments',
+      owner: 'saysin',
+      admin: ['saysin'],
+      id: 'e60179403caafeca36aca275801250b9',
+        language: window.navigator.language || window.navigator.userLanguage,
+      
+      distractionFreeMode: 'true'
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+</script>
+
 
 <script>
 NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
@@ -626,25 +645,6 @@ NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
     path: location.pathname
   });
 }, window.Valine);
-</script>
-
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
-
-<script>
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
-    var gitalk = new Gitalk({
-      clientID: 'bfb3d43b083c44600baa',
-      clientSecret: 'fd0eea1f4dea43aed37216b8ba6ecb43570f1beb',
-      repo: 'BlogComments',
-      owner: 'saysin',
-      admin: ['saysin'],
-      id: 'e60179403caafeca36aca275801250b9',
-        language: window.navigator.language || window.navigator.userLanguage,
-      
-      distractionFreeMode: 'true'
-    });
-    gitalk.render('gitalk-container');
-  }, window.Gitalk);
 </script>
 
 </body>
